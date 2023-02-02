@@ -6,7 +6,7 @@ p {
     padding: 0;
     margin: 0;
 }
-
+//start header
 #up {
     margin-top: 30px;
 
@@ -58,6 +58,7 @@ p {
         display: flex;
         align-items: center;
         justify-content: space-around;
+
         .call-back {
             display: flex;
             align-items: center;
@@ -70,29 +71,74 @@ p {
 
             .call-back-info {
                 margin-left: 10px;
+
                 p {
                     font-size: 12px;
                     font-family: Arial, Helvetica, sans-serif;
                     opacity: 1;
-                    &:nth-child(1){
+
+                    &:nth-child(1) {
                         opacity: 0.7;
                     }
+
                     &:nth-child(2) {
                         font-weight: 600;
                     }
                 }
             }
         }
-        .lang{
-            a{
+
+        .lang {
+            a {
                 color: black;
                 opacity: 1;
-                &:last-child{
+
+                &:last-child {
                     opacity: 0.7;
                 }
-                
+
             }
         }
 
+    }
+}
+//start phone header
+#phone-header {
+    margin-top: 15px;
+    i{
+        font-size: 20px;
+        color: black;
+    }
+    .left {
+        .hamburger-menu{
+            margin-right: 15px;
+        }
+    }
+
+    .center {
+        .logo {
+            width: 90px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .right{
+        .search{
+            margin-right: 15px;
+        }
+    }
+}
+//end phone header
+#down{
+    background-color: #3c3f42;
+    height: 50px;
+    .catalog{
+        background-color: #232222;
+        color: white;
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+        
     }
 }

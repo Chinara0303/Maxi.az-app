@@ -73,4 +73,36 @@ p {
 }
 #up .right .lang a:last-child {
   opacity: 0.7;
+}
+
+#phone-header {
+  margin-top: 15px;
+}
+#phone-header i {
+  font-size: 20px;
+  color: black;
+}
+#phone-header .left .hamburger-menu {
+  margin-right: 15px;
+}
+#phone-header .center .logo {
+  width: 90px;
+}
+#phone-header .center .logo img {
+  width: 100%;
+}
+#phone-header .right .search {
+  margin-right: 15px;
+}
+
+#down {
+  background-color: #3c3f42;
+  height: 50px;
+}
+#down .catalog {
+  background-color: #232222;
+  color: white;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
 }/*# sourceMappingURL=style.css.map */
