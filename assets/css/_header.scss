@@ -4,7 +4,7 @@
 
 $size: 10px;
 
-//start header
+
 #up {
     margin: 20px 0;
 
@@ -57,7 +57,7 @@ $size: 10px;
         .call-back {
             display: flex;
             align-items: center;
-
+            margin-left: 35px;
             a {
                 font-size: 32px;
                 font-weight: bold;
@@ -104,7 +104,7 @@ $size: 10px;
 
     i {
         font-size: 20px;
-        color: black;
+        color: #000000;
     }
 
     .left {
@@ -133,11 +133,11 @@ $size: 10px;
 //end phone header
 #down {
     background-color: #3c3f42;
-
     .menu {
         display: flex;
         align-items: center;
         .catalog {
+            cursor: pointer;
             background-color: #232222;
             padding: 20px;
             width: 33%;
@@ -200,3 +200,5 @@ $size: 10px;
     }
 
 }
+
+
