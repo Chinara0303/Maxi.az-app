@@ -1,0 +1,202 @@
+@mixin Font {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+$size: 10px;
+
+//start header
+#up {
+    margin: 20px 0;
+
+    .left {
+        .logo {
+            img {
+                width: 130%;
+            }
+        }
+
+        ul {
+            padding-left: 20px !important;
+            list-style: none;
+            margin-top: $size;
+
+            li {
+                transition: .4s;
+
+                &:first-child {
+                    a {
+                        color: #ec2127;
+                        @include Font();
+                    }
+                }
+
+                &:not(:last-child) {
+                    margin-right: $size;
+                }
+
+                a {
+                    color: #53595c;
+                    font-size: 14px;
+                    opacity: 1;
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+
+    }
+
+    .right {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .call-back {
+            display: flex;
+            align-items: center;
+
+            a {
+                font-size: 32px;
+                font-weight: bold;
+                color: #232222;
+            }
+
+            .call-back-info {
+                margin-left: 10px;
+
+                p {
+                    font-size: 12px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    opacity: 1;
+
+                    &:nth-child(1) {
+                        opacity: 0.7;
+                    }
+
+                    &:nth-child(2) {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+        .lang {
+            a {
+                color: black;
+                opacity: 1;
+
+                &:last-child {
+                    opacity: 0.7;
+                }
+
+            }
+        }
+
+    }
+}
+
+//start phone header
+#phone-header {
+    margin-top: 15px;
+
+    i {
+        font-size: 20px;
+        color: black;
+    }
+
+    .left {
+        .hamburger-menu {
+            margin-right: 15px;
+        }
+    }
+
+    .center {
+        .logo {
+            width: 90px;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .right {
+        .search {
+            margin-right: 15px;
+        }
+    }
+}
+
+//end phone header
+#down {
+    background-color: #3c3f42;
+
+    .menu {
+        display: flex;
+        align-items: center;
+        .catalog {
+            background-color: #232222;
+            padding: 20px;
+            width: 33%;
+            color: white;
+            font-size: 16px;
+            line-height: 125%;
+            letter-spacing: .02em;
+            text-transform: uppercase;
+            @include Font();
+
+            i {
+                font-size: 20px;
+                margin-right: 6px;
+            }
+        }
+
+        .search-box {
+            background-color: white;
+            margin-left: $size;
+            height: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 60%;
+            border-radius: $size;
+
+            input {
+                border: none;
+                outline: none;
+                border-radius: $size;
+                margin-left: $size;
+                width: 100%;
+            }
+
+            button {
+                border: none;
+                background-color: white;
+                border-radius: $size;
+                margin-right: $size;
+            }
+        }
+
+    }
+
+    .icons {
+        ul {
+            li {
+                a {
+                    display: flex;
+                    align-items: center;
+                    color: white;
+                    font-size: 25px;
+                    span{
+                        font-size: 14px;
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+}
