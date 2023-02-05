@@ -1,13 +1,11 @@
 @mixin Font {
     font-family: Arial, Helvetica, sans-serif;
 }
-
 $size: 10px;
-
 
 #up {
     margin: 20px 0;
-    
+
     .left {
         .logo {
             img {
@@ -58,6 +56,7 @@ $size: 10px;
             display: flex;
             align-items: center;
             margin-left: 35px;
+
             a {
                 font-size: 32px;
                 font-weight: bold;
@@ -97,108 +96,120 @@ $size: 10px;
 
     }
 }
-
-//start phone header
-#phone-header {
-    margin-top: 15px;
-    padding-bottom: 15px;
-    i {
-        font-size: 20px;
-        color: #000000;
-    }
-
-    .left {
-        .hamburger-menu {
-            margin-right: 15px;
+#header{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    #down {
+        background-color: #3c3f42;
+        .menu {
+            display: flex;
+            align-items: center;
+            .catalog {
+                cursor: pointer;
+                background-color: #232222;
+                padding: 20px;
+                width: 33%;
+                color: white;
+                font-size: 16px;
+                line-height: 125%;
+                letter-spacing: .02em;
+                text-transform: uppercase;
+                @include Font();
+    
+                i {
+                    font-size: 20px;
+                    margin-right: 6px;
+                }
+            }
+    
+            .search-box {
+                background-color: white;
+                margin-left: $size;
+                height: 40px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 60%;
+                border-radius: $size;
+    
+                input {
+                    border: none;
+                    outline: none;
+                    border-radius: $size;
+                    margin-left: $size;
+                    width: 100%;
+                }
+    
+                button {
+                    border: none;
+                    background-color: white;
+                    border-radius: $size;
+                    margin-right: $size;
+                }
+            }
+    
         }
-    }
-
-    .center {
-        .logo {
-            width: 90px;
-
-            img {
-                width: 100%;
+    
+        .icons {
+            ul {
+                li {
+                    a {
+                        display: flex;
+                        align-items: center;
+                        color: white;
+                        font-size: 22px;
+    
+                        span {
+                            font-size: 14px;
+                            margin-left: 5px;
+                        }
+                    }
+                }
             }
         }
+    
     }
+}
 
-    .right {
-        .search {
-            margin-right: 15px;
+//start phone header
+#phone{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    #phone-header {
+        margin-bottom: 10px;
+        padding: 15px 0;
+        background-color: white;
+        box-shadow: 0 2px 20px rgb(0 0 0 / 5%);
+        i {
+            font-size: 20px;
+            color: #000000;
+        }
+    
+        .left {
+            .hamburger-menu {
+                margin-right: 15px;
+            }
+        }
+    
+        .center {
+            .logo {
+                width: 90px;
+    
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    
+        .right {
+            .search {
+                margin-right: 15px;
+            }
         }
     }
 }
 
 //end phone header
-#down {
-    background-color: #3c3f42;
-    .menu {
-        display: flex;
-        align-items: center;
-        .catalog {
-            cursor: pointer;
-            background-color: #232222;
-            padding: 20px;
-            width: 33%;
-            color: white;
-            font-size: 16px;
-            line-height: 125%;
-            letter-spacing: .02em;
-            text-transform: uppercase;
-            @include Font();
-
-            i {
-                font-size: 20px;
-                margin-right: 6px;
-            }
-        }
-
-        .search-box {
-            background-color: white;
-            margin-left: $size;
-            height: 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 60%;
-            border-radius: $size;
-
-            input {
-                border: none;
-                outline: none;
-                border-radius: $size;
-                margin-left: $size;
-                width: 100%;
-            }
-
-            button {
-                border: none;
-                background-color: white;
-                border-radius: $size;
-                margin-right: $size;
-            }
-        }
-
-    }
-
-    .icons {
-        ul {
-            li {
-                a {
-                    display: flex;
-                    align-items: center;
-                    color: white;
-                    font-size: 25px;
-                    span{
-                        font-size: 14px;
-                        margin-left: 5px;
-                    }
-                }
-            }
-        }
-    }
-
-}
-
 

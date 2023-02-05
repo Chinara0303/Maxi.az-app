@@ -64,7 +64,7 @@
 
     #sale {
         .memory {
-            width: 20% !important;
+            width: 25% !important;
         }
         .left {
             .text {
@@ -87,6 +87,54 @@
                 top: 80px;
                 right: 25px;
             }
+        }
+    }
+
+    #subscribe{
+        .subscribe-content{
+            display: block;
+            padding: 50px;
+            .gift-content{
+                width: 100% !important;
+                h1{
+                    text-align: center;
+                    width: 100%;
+                }
+                ul{
+                    width: 100% !important;
+                }
+            }
+            .form-content{
+                width: 100%;
+                display: block;
+                .left-side{
+                    width: 100%;
+                   
+                    p{
+                        text-align: center;
+                        margin-top: 20px;
+                    }
+                    input{
+                        width: 100%;
+                    }
+                }
+                .right-side{
+                    width: 100%;
+                    margin-left: 0;
+                    button{
+                        width: 100%;
+                    }
+
+                }
+            }
+        }
+    }
+    #footer-bottom{
+        .copyright{
+            margin-bottom: 10px;
+        }
+        .owner{
+            margin-bottom: 5px;
         }
     }
 }

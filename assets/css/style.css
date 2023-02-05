@@ -65,35 +65,20 @@
   opacity: 0.7;
 }
 
-#phone-header {
-  margin-top: 15px;
-  padding-bottom: 15px;
+#header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
-#phone-header i {
-  font-size: 20px;
-  color: #000000;
-}
-#phone-header .left .hamburger-menu {
-  margin-right: 15px;
-}
-#phone-header .center .logo {
-  width: 90px;
-}
-#phone-header .center .logo img {
-  width: 100%;
-}
-#phone-header .right .search {
-  margin-right: 15px;
-}
-
-#down {
+#header #down {
   background-color: #3c3f42;
 }
-#down .menu {
+#header #down .menu {
   display: flex;
   align-items: center;
 }
-#down .menu .catalog {
+#header #down .menu .catalog {
   cursor: pointer;
   background-color: #232222;
   padding: 20px;
@@ -105,11 +90,11 @@
   text-transform: uppercase;
   font-family: Arial, Helvetica, sans-serif;
 }
-#down .menu .catalog i {
+#header #down .menu .catalog i {
   font-size: 20px;
   margin-right: 6px;
 }
-#down .menu .search-box {
+#header #down .menu .search-box {
   background-color: white;
   margin-left: 10px;
   height: 40px;
@@ -119,36 +104,76 @@
   width: 60%;
   border-radius: 10px;
 }
-#down .menu .search-box input {
+#header #down .menu .search-box input {
   border: none;
   outline: none;
   border-radius: 10px;
   margin-left: 10px;
   width: 100%;
 }
-#down .menu .search-box button {
+#header #down .menu .search-box button {
   border: none;
   background-color: white;
   border-radius: 10px;
   margin-right: 10px;
 }
-#down .icons ul li a {
+#header #down .icons ul li a {
   display: flex;
   align-items: center;
   color: white;
-  font-size: 25px;
+  font-size: 22px;
 }
-#down .icons ul li a span {
+#header #down .icons ul li a span {
   font-size: 14px;
   margin-left: 5px;
+}
+
+#phone {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+#phone #phone-header {
+  margin-bottom: 10px;
+  padding: 15px 0;
+  background-color: white;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+}
+#phone #phone-header i {
+  font-size: 20px;
+  color: #000000;
+}
+#phone #phone-header .left .hamburger-menu {
+  margin-right: 15px;
+}
+#phone #phone-header .center .logo {
+  width: 90px;
+}
+#phone #phone-header .center .logo img {
+  width: 100%;
+}
+#phone #phone-header .right .search {
+  margin-right: 15px;
 }
 
 @font-face {
   font-family: Montserrat;
   src: url(../fonts/static/Montserrat-Bold.ttf);
 }
+#introduction .navigation {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  width: 105%;
+  border-radius: 4px;
+  padding: 10px;
+  background-color: white;
+}
 #introduction .navigation ul {
   margin-top: 13px;
+}
+#introduction .navigation ul li:nth-child(1) {
+  background: #fafafa;
+  width: 104%;
 }
 #introduction .navigation ul li:last-child a span {
   color: #ec2127;
@@ -191,18 +216,15 @@
   background-color: #fefafa;
   border-radius: 50%;
   padding: 10px;
+  cursor: pointer;
 }
 #introduction .intro-bg i:nth-child(1) {
   position: absolute;
   top: 50%;
-  left: 3%;
-  transform: translate(-50%, -50%);
 }
 #introduction .intro-bg i:nth-child(3) {
   position: absolute;
   top: 50%;
-  right: 0%;
-  transform: translate(-50%, -50%);
 }
 #introduction .intro-bg .lines {
   display: flex;
@@ -553,7 +575,6 @@
   padding: 60px 20px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 #subscribe .subscribe-content .gift-content {
   width: 30%;
@@ -583,10 +604,11 @@
   font-size: 14px;
 }
 #subscribe .subscribe-content .form-content {
-  width: 70%;
+  display: flex;
+  align-items: center;
 }
 #subscribe .subscribe-content .form-content .left-side {
-  width: 50%;
+  width: 55%;
 }
 #subscribe .subscribe-content .form-content .left-side p {
   font-size: 14px;
@@ -629,6 +651,22 @@
   color: #232332;
   font-size: 12px;
 }
+#subscribe .subscribe-content .form-content .right-side {
+  width: 45%;
+  margin-left: 35px;
+}
+#subscribe .subscribe-content .form-content .right-side button {
+  height: 45px;
+  text-transform: uppercase;
+  background-color: #ec2127;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  width: 145%;
+  border: none;
+  border-radius: 4px;
+}
 
 .cards {
   position: relative;
@@ -650,6 +688,9 @@
   font-size: 18px;
   opacity: 0.7;
   margin-left: 10px;
+}
+.cards .product-card .card-imgg {
+  height: 85px;
 }
 .cards .product-card .card-img {
   padding: 10px;
@@ -681,9 +722,9 @@
 .cards .product-card .card-center .desc span:nth-child(2) {
   margin-left: 5px;
 }
-.cards .product-card .card-center .desc a {
+.cards .product-card .card-center a {
   font-size: 10px;
-  color: #232332;
+  color: #232332 !important;
 }
 .cards .product-card .card-bottom .main-price p {
   font-size: 24px;
@@ -872,7 +913,7 @@
     margin-bottom: 15px;
   }
   #sale .memory {
-    width: 20% !important;
+    width: 25% !important;
   }
   #sale .left .text h2 {
     font-size: 18px !important;
@@ -888,6 +929,47 @@
     width: 30%;
     top: 80px;
     right: 25px;
+  }
+  #subscribe .subscribe-content {
+    display: block;
+    padding: 50px;
+  }
+  #subscribe .subscribe-content .gift-content {
+    width: 100% !important;
+  }
+  #subscribe .subscribe-content .gift-content h1 {
+    text-align: center;
+    width: 100%;
+  }
+  #subscribe .subscribe-content .gift-content ul {
+    width: 100% !important;
+  }
+  #subscribe .subscribe-content .form-content {
+    width: 100%;
+    display: block;
+  }
+  #subscribe .subscribe-content .form-content .left-side {
+    width: 100%;
+  }
+  #subscribe .subscribe-content .form-content .left-side p {
+    text-align: center;
+    margin-top: 20px;
+  }
+  #subscribe .subscribe-content .form-content .left-side input {
+    width: 100%;
+  }
+  #subscribe .subscribe-content .form-content .right-side {
+    width: 100%;
+    margin-left: 0;
+  }
+  #subscribe .subscribe-content .form-content .right-side button {
+    width: 100%;
+  }
+  #footer-bottom .copyright {
+    margin-bottom: 10px;
+  }
+  #footer-bottom .owner {
+    margin-bottom: 5px;
   }
 }
 body {
@@ -956,4 +1038,77 @@ ul {
   opacity: 0.7;
   border-bottom: 1px dotted;
   font-weight: 600;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/static/Montserrat-Bold.ttf);
+}
+footer {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #232222;
+}
+footer #footer-top {
+  padding-top: 40px;
+  margin-bottom: 50px;
+}
+footer #footer-top .footer-aside {
+  color: white;
+  font-size: 14px;
+}
+footer #footer-top .footer-aside a P {
+  color: white;
+  font-size: 25px;
+  font-family: Montserrat;
+}
+footer #footer-top .footer-aside .social-links {
+  margin-top: 20px;
+}
+footer #footer-top .footer-aside .social-links a {
+  color: white;
+}
+footer #footer-top .footer-aside .social-links a i {
+  font-size: 25px;
+  margin-right: 15px;
+}
+footer #footer-top .line {
+  height: 1px;
+  width: 100%;
+  background-color: #5a5959;
+  margin: 30px 0 30px 0;
+}
+footer #footer-top .footer-menues {
+  color: white;
+}
+footer #footer-top .footer-menues span {
+  font-size: 12px;
+  letter-spacing: 1.3px;
+  margin-bottom: 10px;
+  display: inline-block;
+  text-transform: uppercase;
+}
+footer #footer-top .footer-menues ul li {
+  margin-bottom: 3px;
+}
+footer #footer-top .footer-menues ul li a {
+  color: #e5e5e5;
+  font-size: 14px;
+}
+footer #footer-bottom {
+  color: white;
+  padding-bottom: 20px;
+}
+footer #footer-bottom .copyright p {
+  color: #e5e5e5;
+  font-size: 11px;
+}
+footer #footer-bottom .owner img {
+  width: 80px;
+  margin-right: 10px;
+  height: 40px;
+}
+footer #footer-bottom .owner span {
+  font-size: 11px;
+  display: inline-block;
+  margin-bottom: 19px;
 }/*# sourceMappingURL=style.css.map */

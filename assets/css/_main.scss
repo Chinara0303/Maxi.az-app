@@ -12,10 +12,21 @@ $color: #ec2127;
 //start introduction section
 #introduction {
     .navigation {
+        box-shadow: 0 2px 8px rgb(0 0 0 / 8%);
+        width: 105%;
+        border-radius: 4px;
+        padding: 10px;
+        background-color: white;
+
         ul {
             margin-top: 13px;
 
             li {
+                &:nth-child(1) {
+                    background: #fafafa;
+                    width: 104%;
+                }
+
                 &:last-child {
                     a {
                         span {
@@ -64,30 +75,24 @@ $color: #ec2127;
     .intro-bg {
         box-shadow: 0 2px 8px rgb(0 0 0 / 8%);
         position: relative;
-
         a {
             img {
                 width: 100%;
             }
         }
-
         i {
             background-color: #fefafa;
             border-radius: 50%;
             padding: 10px;
-
+            cursor: pointer;
             &:nth-child(1) {
                 position: absolute;
                 top: 50%;
-                left: 3%;
-                transform: translate(-50%, -50%);
             }
 
             &:nth-child(3) {
                 position: absolute;
                 top: 50%;
-                right: 0%;
-                transform: translate(-50%, -50%);
             }
 
         }
@@ -508,35 +513,42 @@ $color: #ec2127;
 
     .blogs {
         margin: 20px 0;
-        .blog-card{
+
+        .blog-card {
             border-radius: 20px;
             box-shadow: 0 2px 8px rgb(0 0 0 / 8%);
+
             .img-box {
                 img {
                     border-top-left-radius: 20px;
                     border-top-right-radius: 20px;
                 }
             }
-            .content{
-                padding: 20px 20px 30px 20px ;
-                .content-top{
+
+            .content {
+                padding: 20px 20px 30px 20px;
+
+                .content-top {
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
                     font-size: 11px;
                     margin-bottom: 15px;
-                    span{
-                        &:nth-child(1){
+
+                    span {
+                        &:nth-child(1) {
                             background-color: rgb(251, 230, 155);
                             padding: 1px 5px;
                         }
-                        &:nth-child(2){
+
+                        &:nth-child(2) {
                             color: #85898b;
                         }
-                   
+
                     }
                 }
-                a{
+
+                a {
                     color: #232332;
                     font-size: 16px;
                     font-weight: 600;
@@ -544,23 +556,26 @@ $color: #ec2127;
                 }
             }
         }
-       
+
     }
 }
+
 //end blog section
 
-#subscribe{
+#subscribe {
     margin: 100px 0;
-    .subscribe-content{
+
+    .subscribe-content {
         box-shadow: 0 2px 8px rgb(0 0 0 / 8%), 0 2px 8px rgb(0 0 0 / 8%);
         border-radius: 24px;
         padding: 60px 20px;
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        .gift-content{
+
+        .gift-content {
             width: 30%;
-            h1{
+
+            h1 {
                 font-size: 44px;
                 font-family: Montserrat;
                 font-weight: bolder !important;
@@ -568,68 +583,95 @@ $color: #ec2127;
                 text-transform: uppercase;
                 line-height: 30px;
                 width: 90%;
-                span{
+
+                span {
                     font-size: 28px;
                     color: #232332;
                 }
             }
-            ul{
+
+            ul {
                 display: flex;
                 flex-wrap: wrap;
                 width: 88%;
-                li{
+
+                li {
                     width: 50%;
                     list-style: inside;
-                    padding-left:1% ;
+                    padding-left: 1%;
                     font-size: 14px;
                 }
             }
         }
-        .form-content{
-            width: 70%;
-            .left-side{
-                width: 50%;
-                p{
+
+        .form-content {
+            display: flex;
+            align-items: center;
+
+            .left-side {
+                width: 55%;
+
+                p {
                     font-size: 14px;
                     color: #232332;
-
                 }
-                &:nth-child(1){
-                    input{
+
+                &:nth-child(1) {
+                    input {
                         margin-right: 15px;
                         margin-top: 10px;
-
                     }
                 }
-                input{
+
+                input {
                     width: 44%;
                     height: 45px;
-                    padding:10px ;
+                    padding: 10px;
                     border: 1px solid #e5e5e5;
                     border-radius: 4px;
                     outline: none;
-                    &::placeholder{
+
+                    &::placeholder {
                         font-size: 12px;
                         color: #85898b;
                     }
-                  
-                    
                 }
-                .agree{
+
+                .agree {
                     display: flex;
                     align-items: center;
-                    input{
+
+                    input {
                         width: 4%;
                         margin-top: 0;
                         margin-right: 7px;
                     }
-                    span{
+
+                    span {
                         color: #232332;
                         font-size: 12px;
                     }
                 }
             }
+
+            .right-side {
+                width: 45%;
+                margin-left: 35px;
+
+                button {
+                    height: 45px;
+                    text-transform: uppercase;
+                    background-color: $color;
+                    color: white;
+                    font-size: 13px;
+                    font-weight: bold;
+                    text-align: center;
+                    width: 145%;
+                    border: none;
+                    border-radius: 4px;
+                }
+            }
         }
-       
+
     }
 }
