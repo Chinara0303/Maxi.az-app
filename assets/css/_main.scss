@@ -172,32 +172,27 @@ $color: #ec2127;
         }
     }
 }
-
 //end guarantees section
 
 //start innovations section
 #innovations {
     margin-bottom: 70px;
 }
-
 //end innovations section
 
 //start annonuncement section
 #announcement {
     border-radius: 20px;
-
     .announcement-top {
         position: relative;
         background-color: #FFF;
         padding: 40px;
         box-shadow: 0 2px 20px rgb(0 0 0 / 5%);
-
         h2 {
             text-transform: uppercase;
             font-size: 40px;
             color: $color;
             font-weight: bold;
-
             span {
                 color: #0c61d5;
             }
@@ -214,17 +209,26 @@ $color: #ec2127;
         .tabs-scroll {
             overflow-y: hidden;
             overflow-x: scroll;
-
             .tabs {
                 padding: 10px 0;
                 width: 120%;
-
-                span {
-                    padding: 6px 14px;
-                    background-color: #eaf0f8;
-                    border-radius: 19px;
-                    font-size: 16px;
+                a{
+                    color: #232332;
+                    span {
+                        padding: 6px 14px;
+                        background-color: #eaf0f8;
+                        border-radius: 19px;
+                        font-size: 16px;
+                    }
+                    &:nth-child(1){
+                        span{
+                            background-color: #0c61d5;
+                            padding: 10px 30px;
+                            color: white;
+                        }
+                    }
                 }
+                
             }
         }
 
