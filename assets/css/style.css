@@ -161,6 +161,11 @@
   font-family: Montserrat;
   src: url(../fonts/static/Montserrat-Bold.ttf);
 }
+#subscribe .subscribe-content .form-content .left-side .agree, #subscribe .subscribe-content .form-content, #subscribe .subscribe-content, #blog .blogs .blog-card .content .content-top, #brands .brand, #announcement .announcement-bottom, #guarantees .box, #introduction .intro-bg .lines {
+  display: flex;
+  align-items: center;
+}
+
 #introduction .navigation {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   width: 105%;
@@ -227,8 +232,6 @@
   top: 50%;
 }
 #introduction .intro-bg .lines {
-  display: flex;
-  align-items: center;
   justify-content: center;
   position: relative;
   bottom: 30px;
@@ -254,9 +257,7 @@
 #guarantees .box {
   background-color: rgba(237, 237, 238, 0.862745098);
   padding: 20px;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
   position: relative;
   min-height: 135px;
   margin-left: 5px;
@@ -345,8 +346,6 @@
 #announcement .announcement-bottom {
   padding: 40px 40px 20px 40px;
   background-color: #FFA319;
-  display: flex;
-  align-items: center;
 }
 #announcement .announcement-bottom .left .description ul li {
   list-style: inside;
@@ -423,9 +422,7 @@
   margin: 100px 0;
 }
 #brands .brand {
-  display: flex;
   justify-content: center;
-  align-items: center;
   border-radius: 50%;
   background-color: #e8e8e8;
   width: 150px;
@@ -497,8 +494,6 @@
   content: "";
   display: block;
   position: absolute;
-  width: 16px;
-  height: 16px;
   width: 22px;
   height: 22px;
   top: -4px;
@@ -521,8 +516,6 @@
   content: "";
   display: block;
   position: absolute;
-  width: 16px;
-  height: 16px;
   width: 22px;
   height: 22px;
   top: -4px;
@@ -554,8 +547,6 @@
   padding: 20px 20px 30px 20px;
 }
 #blog .blogs .blog-card .content .content-top {
-  display: flex;
-  align-items: center;
   justify-content: space-between;
   font-size: 11px;
   margin-bottom: 15px;
@@ -581,8 +572,6 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.08);
   border-radius: 24px;
   padding: 60px 20px;
-  display: flex;
-  align-items: center;
 }
 #subscribe .subscribe-content .gift-content {
   width: 30%;
@@ -610,10 +599,6 @@
   list-style: inside;
   padding-left: 1%;
   font-size: 14px;
-}
-#subscribe .subscribe-content .form-content {
-  display: flex;
-  align-items: center;
 }
 #subscribe .subscribe-content .form-content .left-side {
   width: 55%;
@@ -645,10 +630,6 @@
 #subscribe .subscribe-content .form-content .left-side input::placeholder {
   font-size: 12px;
   color: #85898b;
-}
-#subscribe .subscribe-content .form-content .left-side .agree {
-  display: flex;
-  align-items: center;
 }
 #subscribe .subscribe-content .form-content .left-side .agree input {
   width: 4%;

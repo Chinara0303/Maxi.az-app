@@ -1,13 +1,12 @@
-@mixin Font {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
+@import '../css/scss/partials/mixin';
+@import '../css/scss/partials/variables';
+@import '../partials/extends';
 @font-face {
     font-family: Montserrat;
     src: url(../fonts/static/Montserrat-Bold.ttf);
 }
 
-$color: #ec2127;
+
 
 //start introduction section
 #introduction {
@@ -75,16 +74,19 @@ $color: #ec2127;
     .intro-bg {
         box-shadow: 0 2px 8px rgb(0 0 0 / 8%);
         position: relative;
+
         a {
             img {
                 width: 100%;
             }
         }
+
         i {
             background-color: #fefafa;
             border-radius: 50%;
             padding: 10px;
             cursor: pointer;
+
             &:nth-child(1) {
                 position: absolute;
                 top: 50%;
@@ -98,8 +100,7 @@ $color: #ec2127;
         }
 
         .lines {
-            display: flex;
-            align-items: center;
+            @extend %content-align;
             justify-content: center;
             position: relative;
             bottom: 30px;
@@ -134,9 +135,8 @@ $color: #ec2127;
     .box {
         background-color: #ededeedc;
         padding: 20px;
-        display: flex;
+        @extend %content-align;
         flex-direction: column;
-        justify-content: center;
         position: relative;
         min-height: 135px;
         margin-left: 5px;
@@ -172,27 +172,32 @@ $color: #ec2127;
         }
     }
 }
+
 //end guarantees section
 
 //start innovations section
 #innovations {
     margin-bottom: 70px;
 }
+
 //end innovations section
 
 //start annonuncement section
 #announcement {
     border-radius: 20px;
+
     .announcement-top {
         position: relative;
         background-color: #FFF;
         padding: 40px;
         box-shadow: 0 2px 20px rgb(0 0 0 / 5%);
+
         h2 {
             text-transform: uppercase;
             font-size: 40px;
             color: $color;
             font-weight: bold;
+
             span {
                 color: #0c61d5;
             }
@@ -209,26 +214,30 @@ $color: #ec2127;
         .tabs-scroll {
             overflow-y: hidden;
             overflow-x: scroll;
+
             .tabs {
                 padding: 10px 0;
                 width: 120%;
-                a{
+
+                a {
                     color: #232332;
+
                     span {
                         padding: 6px 14px;
                         background-color: #eaf0f8;
                         border-radius: 19px;
                         font-size: 16px;
                     }
-                    &:nth-child(1){
-                        span{
+
+                    &:nth-child(1) {
+                        span {
                             background-color: #0c61d5;
                             padding: 10px 30px;
                             color: white;
                         }
                     }
                 }
-                
+
             }
         }
 
@@ -246,11 +255,9 @@ $color: #ec2127;
     .announcement-bottom {
         padding: 40px 40px 20px 40px;
         background-color: #FFA319;
-        display: flex;
-        align-items: center;
+        @extend %content-align;
 
         .left {
-
             .description {
                 ul {
                     li {
@@ -354,9 +361,8 @@ $color: #ec2127;
     margin: 100px 0;
 
     .brand {
-        display: flex;
+        @extend %content-align;
         justify-content: center;
-        align-items: center;
         border-radius: 50%;
         background-color: #e8e8e8;
         width: 150px;
@@ -455,8 +461,6 @@ $color: #ec2127;
                         content: "";
                         display: block;
                         position: absolute;
-                        width: 16px;
-                        height: 16px;
                         width: 22px;
                         height: 22px;
                         top: -4px;
@@ -486,8 +490,6 @@ $color: #ec2127;
                         content: "";
                         display: block;
                         position: absolute;
-                        width: 16px;
-                        height: 16px;
                         width: 22px;
                         height: 22px;
                         top: -4px;
@@ -533,8 +535,7 @@ $color: #ec2127;
                 padding: 20px 20px 30px 20px;
 
                 .content-top {
-                    display: flex;
-                    align-items: center;
+                    @extend %content-align;
                     justify-content: space-between;
                     font-size: 11px;
                     margin-bottom: 15px;
@@ -573,12 +574,9 @@ $color: #ec2127;
         box-shadow: 0 2px 8px rgb(0 0 0 / 8%), 0 2px 8px rgb(0 0 0 / 8%);
         border-radius: 24px;
         padding: 60px 20px;
-        display: flex;
-        align-items: center;
-
+        @extend %content-align;
         .gift-content {
             width: 30%;
-
             h1 {
                 font-size: 44px;
                 font-family: Montserrat;
@@ -587,7 +585,6 @@ $color: #ec2127;
                 text-transform: uppercase;
                 line-height: 30px;
                 width: 90%;
-
                 span {
                     font-size: 28px;
                     color: #232332;
@@ -598,7 +595,6 @@ $color: #ec2127;
                 display: flex;
                 flex-wrap: wrap;
                 width: 88%;
-
                 li {
                     width: 50%;
                     list-style: inside;
@@ -609,12 +605,9 @@ $color: #ec2127;
         }
 
         .form-content {
-            display: flex;
-            align-items: center;
-
+           @extend %content-align;
             .left-side {
                 width: 55%;
-
                 p {
                     font-size: 14px;
                     color: #232332;
@@ -642,15 +635,12 @@ $color: #ec2127;
                 }
 
                 .agree {
-                    display: flex;
-                    align-items: center;
-
+                    @extend %content-align;
                     input {
                         width: 4%;
                         margin-top: 0;
                         margin-right: 7px;
                     }
-
                     span {
                         color: #232332;
                         font-size: 12px;
@@ -661,7 +651,6 @@ $color: #ec2127;
             .right-side {
                 width: 45%;
                 margin-left: 35px;
-
                 button {
                     height: 45px;
                     text-transform: uppercase;
@@ -676,6 +665,5 @@ $color: #ec2127;
                 }
             }
         }
-
     }
 }
