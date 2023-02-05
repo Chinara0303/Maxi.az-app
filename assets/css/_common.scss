@@ -23,15 +23,18 @@ ul {
         color: #232332;
         font-size: 20px;
         font-weight: bold;
+        margin-right: 16px;
+        text-transform: uppercase;
     }
 
     a {
         color: #53595c;
-        font-size: 13px;
+        font-size: 12px;
         @include Font();
+        margin-bottom: 5px;
 
         i {
-            margin-left: 10px;
+            margin-left: 5px;
         }
     }
 }

@@ -1,10 +1,12 @@
 @mixin Font {
     font-family: Arial, Helvetica, sans-serif;
 }
+
 @font-face {
     font-family: Montserrat;
     src: url(../fonts/static/Montserrat-Bold.ttf);
 }
+
 $color: #ec2127;
 
 //start introduction section
@@ -62,11 +64,13 @@ $color: #ec2127;
     .intro-bg {
         box-shadow: 0 2px 8px rgb(0 0 0 / 8%);
         position: relative;
-        a{
-            img{
+
+        a {
+            img {
                 width: 100%;
             }
         }
+
         i {
             background-color: #fefafa;
             border-radius: 50%;
@@ -115,6 +119,7 @@ $color: #ec2127;
         }
     }
 }
+
 //end introduction section
 
 //start guarantees section
@@ -162,17 +167,20 @@ $color: #ec2127;
         }
     }
 }
+
 //end guarantees section
 
 //start innovations section
 #innovations {
     margin-bottom: 70px;
 }
+
 //end innovations section
 
 //start annonuncement section
 #announcement {
     border-radius: 20px;
+
     .announcement-top {
         position: relative;
         background-color: #FFF;
@@ -329,6 +337,7 @@ $color: #ec2127;
         }
     }
 }
+
 //end annonuncement section
 
 //start brands section
@@ -355,12 +364,14 @@ $color: #ec2127;
         }
     }
 }
+
 //end brands section
 
 // start sale section
 #sale {
     margin-bottom: 100px;
     position: relative;
+
     .sales {
         background-color: #ededee;
         border-radius: 20px;
@@ -412,6 +423,7 @@ $color: #ec2127;
 
     }
 }
+
 // end sale section
 
 //start best-sales section
@@ -425,8 +437,10 @@ $color: #ec2127;
 
         .product-colors {
             margin-bottom: 10px;
+
             a {
                 position: relative;
+
                 &:nth-child(4) {
                     &::after {
                         content: "";
@@ -444,16 +458,20 @@ $color: #ec2127;
                     }
                 }
             }
+
             img {
 
                 width: 15%;
                 border-radius: 50%;
             }
         }
-        .prod-color{
+
+        .prod-color {
             margin-bottom: 10px;
+
             a {
                 position: relative;
+
                 &:nth-child(2) {
                     &::after {
                         content: "";
@@ -471,6 +489,7 @@ $color: #ec2127;
                     }
                 }
             }
+
             img {
 
                 width: 15%;
@@ -480,4 +499,137 @@ $color: #ec2127;
         }
     }
 }
+
 //end best-sales section
+
+//start blog section
+#blog {
+    margin: 100px 0;
+
+    .blogs {
+        margin: 20px 0;
+        .blog-card{
+            border-radius: 20px;
+            box-shadow: 0 2px 8px rgb(0 0 0 / 8%);
+            .img-box {
+                img {
+                    border-top-left-radius: 20px;
+                    border-top-right-radius: 20px;
+                }
+            }
+            .content{
+                padding: 20px 20px 30px 20px ;
+                .content-top{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 11px;
+                    margin-bottom: 15px;
+                    span{
+                        &:nth-child(1){
+                            background-color: rgb(251, 230, 155);
+                            padding: 1px 5px;
+                        }
+                        &:nth-child(2){
+                            color: #85898b;
+                        }
+                   
+                    }
+                }
+                a{
+                    color: #232332;
+                    font-size: 16px;
+                    font-weight: 600;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+       
+    }
+}
+//end blog section
+
+#subscribe{
+    margin: 100px 0;
+    .subscribe-content{
+        box-shadow: 0 2px 8px rgb(0 0 0 / 8%), 0 2px 8px rgb(0 0 0 / 8%);
+        border-radius: 24px;
+        padding: 60px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .gift-content{
+            width: 30%;
+            h1{
+                font-size: 44px;
+                font-family: Montserrat;
+                font-weight: bolder !important;
+                color: $color;
+                text-transform: uppercase;
+                line-height: 30px;
+                width: 90%;
+                span{
+                    font-size: 28px;
+                    color: #232332;
+                }
+            }
+            ul{
+                display: flex;
+                flex-wrap: wrap;
+                width: 88%;
+                li{
+                    width: 50%;
+                    list-style: inside;
+                    padding-left:1% ;
+                    font-size: 14px;
+                }
+            }
+        }
+        .form-content{
+            width: 70%;
+            .left-side{
+                width: 50%;
+                p{
+                    font-size: 14px;
+                    color: #232332;
+
+                }
+                &:nth-child(1){
+                    input{
+                        margin-right: 15px;
+                        margin-top: 10px;
+
+                    }
+                }
+                input{
+                    width: 44%;
+                    height: 45px;
+                    padding:10px ;
+                    border: 1px solid #e5e5e5;
+                    border-radius: 4px;
+                    outline: none;
+                    &::placeholder{
+                        font-size: 12px;
+                        color: #85898b;
+                    }
+                  
+                    
+                }
+                .agree{
+                    display: flex;
+                    align-items: center;
+                    input{
+                        width: 4%;
+                        margin-top: 0;
+                        margin-right: 7px;
+                    }
+                    span{
+                        color: #232332;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+       
+    }
+}
